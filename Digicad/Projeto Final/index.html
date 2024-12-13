@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>JazzSchool</title>
+
+    <!-- Bootstrap CSS -->
+    <!-- https://getbootstrap.com/ -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+
+    <!-- 
+      bg-light:	Define um fundo claro.
+      py-3:	Adiciona padding vertical médio.
+      border-bottom: Adiciona uma borda na parte inferior.
+      container: Centraliza o conteúdo e limita a largura.
+      d-flex: Define o layout flexbox.
+      flex-wrap: Permite quebra de linha para itens flexbox.
+      justify-content-between: Posiciona itens com espaço entre eles.
+      align-items-center: Alinha itens verticalmente ao centro.
+      d-block: Define o elemento como bloco, ocupando o espaço do pai.
+      img-fluid: Faz imagens serem responsivas.
+      nav-link:	Estiliza links de navegação com margens e estilos padronizados.
+      px-2:	Adiciona padding horizontal médio.
+      btn: Classe base para botões estilizados.
+      btn-primary: Aplica a cor de botão principal padrão.
+    -->
+    <header class="bg-light py-3 border-bottom">
+      <div
+        class="container d-flex flex-wrap justify-content-between align-items-center"
+      >
+        <!-- Logo -->
+        <a href="#" class="d-block">
+          <img
+            src="./img/logo.svg"
+            alt="Logo JazzSchool"
+            class="img-fluid"
+            style="max-height: 50px"
+          />
+          <!-- style="max-height: 50px": Limita a altura da imagem para evitar que ela fique muito grande. -->
+        </a>
+
+        <!-- Navegação -->
+        <nav class="d-flex flex-wrap align-items-center">
+          <a href="#inicio" class="nav-link px-2">Início</a>
+          <a href="#cursos" class="nav-link px-2">Cursos</a>
+          <a href="#eventos" class="nav-link px-2">Eventos</a>
+          <a href="#contato" class="nav-link px-2">Contato</a>
+        </nav>
+
+        <!-- Botão -->
+         <button type="button" class="btn btn-primary" onclick="Formulario()">Se Inscreva</button>
+        <!-- <a href="#form" class="btn btn-primary">Se Inscreva</a> -->
+      </div>
+    </header>
+
+    <!-- Main -->
+    <!-- 
+      flex-lg-row: Define o layout como flexbox em linha horizontal para telas grandes (breakpoint lg ou superior).
+      flex-column-reverse: Para telas menores que lg, organiza os elementos em uma coluna reversa, ou seja, o texto aparecerá abaixo da imagem.
+      text-center: Centraliza o texto horizontalmente para telas menores.
+      text-lg-start: Alinha o texto à esquerda para telas grandes (lg ou superior).
+      mt-3: Adiciona margin-top média ao título para criar espaço acima dele.
+      text-primary: Aplica a cor primária do Bootstrap (geralmente azul) ao texto.
+      text-decoration-underline: Adiciona sublinhado ao texto.
+      mb-4: Adiciona margin-bottom maior ao parágrafo, criando mais espaçamento abaixo
+      row: Cria uma linha do Bootstrap para organizar os itens em uma grade.
+      g-4: Adiciona um espaçamento uniforme (gutter) médio entre as colunas, tanto horizontalmente quanto verticalmente.
+      col-md-3: Define que a coluna ocupará 3 colunas em um layout de 12 colunas para dispositivos médios (md) ou superiores. Assim, quatro colunas se ajustam por linha (12 ÷ 3 = 4).
+      card: Classe principal do componente de cartão do Bootstrap, que adiciona uma borda, sombra leve e espaçamento interno padrão.
+      card-img-top: Estiliza a imagem para que fique no topo do cartão e ocupe toda a largura disponível do cartão, mantendo a proporção.
+      card-body: Define uma área de conteúdo dentro do cartão com espaçamento interno padrão para o texto e botões.
+      card-title: Classe específica para estilizar títulos dentro do corpo do cartão, aplicando margens automáticas e tamanhos de fonte apropriados.
+      card-text: Define o texto dentro do corpo do cartão com estilização padrão, incluindo margens para melhor legibilidade.
+     -->
+    <main>
+      <!--Section 1 -->
+      <section id="inicio" class="py-5 bg-light">
+        <div
+          class="container d-flex flex-lg-row flex-column-reverse align-items-center"
+        >
+          <div class="text-center text-lg-start">
+            <h1 class="mt-3">
+              Crie algo
+              <span class="text-primary text-decoration-underline">
+                impactante
+              </span>
+              com música
+            </h1>
+            <p class="mt-3 mb-4">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
+              voluptas qui vero quisquam impedit, quaerat recusandae, inventore
+              explicabo.
+            </p>
+            <a href="#" class="btn btn-primary">Comece agora</a>
+          </div>
+          <img
+            src="./img/hero-img.svg"
+            alt="Banda de jazz tocando"
+            class="img-fluid mb-3"
+          />
+        </div>
+      </section>
+
+      <!--Section 2 -->
+      <section id="cursos" class="courses-section py-5">
+        <div class="container text-center">
+          <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-md-3 col-12 col-sm-6 ">
+              <div class="card align-items-center">
+                <img
+                  src="./img/piano.png"
+                  class="card-img-top"
+                  alt="ícones de teclas de piano"
+                  style="width: 12rem"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Piano popular</h5>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+                    quisquam sed a!
+                  </p>
+                  <a href="#" class="btn btn-outline-primary"> Saiba mais </a>
+                </div>
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col-md-3 col-12 col-sm-6">
+              <div class="card align-items-center">
+                <img
+                  src="./img/clef.png"
+                  class="card-img-top"
+                  alt="ícones da clave de sol"
+                  style="width: 12rem;"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Teoria musical</h5>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+                    quisquam sed a!
+                  </p>
+                  <a href="#" class="btn btn-outline-primary"> Saiba mais </a>
+                </div>
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col-md-3 col-12 col-sm-6">
+              <div class="card align-items-center">
+                <img
+                  src="./img/sax.png"
+                  class="card-img-top"
+                  alt="ícones de saxofone"
+                  style="width: 12rem;"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Sax alto</h5>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+                    quisquam sed a!
+                  </p>
+                  <a href="#" class="btn btn-outline-primary"> Saiba mais </a>
+                </div>
+              </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="col-md-3 col-12 col-sm-6">
+              <div class="card align-items-center">
+                <img
+                  src="./img/drums.png"
+                  class="card-img-top"
+                  alt="ícones de baterias"
+                  style="width: 12rem;"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Bateria</h5>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+                    quisquam sed a!
+                  </p>
+                  <a href="#" class="btn btn-outline-primary"> Saiba mais </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h2 class="mt-5">
+            E <span class="text-primary">vários</span> outros!
+          </h2>
+          <a href="#" class="btn btn-primary mt-3">Conhecer os cursos</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contato" class="bg-dark text-white py-5">
+      <div class="container">
+        <div class="row text-center text-lg-start">
+          <!-- Logo e descrição -->
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <img
+              src="./img/logo.svg"
+              alt="Jazz School"
+              class="mb-3 img-fluid"
+            />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi,
+              eos cumque.
+            </p>
+          </div>
+
+          <!-- Links de navegação -->
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <h5 class="mb-3">Links Rápidos</h5>
+            <nav class="d-flex flex-column">
+              <a href="#inicio" class="nav-link text-white px-0">Início</a>
+              <a href="#cursos" class="nav-link text-white px-0">Cursos</a>
+              <a href="#eventos" class="nav-link text-white px-0">Eventos</a>
+              <a href="#contato" class="nav-link text-white px-0">Contato</a>
+            </nav>
+          </div>
+
+          <!-- Formulário -->
+          <div class="col-lg-4">
+            <h5 class="mb-3">Receba Novidades</h5>
+            <form>
+              <label for="email" class="form-label visually-hidden"
+                >Email</label
+              >
+              <div class="input-group">
+                <input
+                  type="email"
+                  id="email"
+                  class="form-control"
+                  placeholder="Digite seu email"
+                  aria-label="Digite seu email"
+                />
+                <button class="btn btn-primary" type="submit">
+                  Inscrever-se
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS (opcional) -->
+    <script src="./script.js"></script>
+    <!-- <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-qFZ2v8trdaWBYtPLD5H1UlE7Lb/mfs7U6d2F4kWsfyB8hV0JKT0U8kS3YrMppFsn"
+      crossorigin="anonymous"></script> -->
+  </body>
+</html>
+
