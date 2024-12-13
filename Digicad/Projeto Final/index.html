@@ -59,8 +59,7 @@
         </nav>
 
         <!-- Botão -->
-         <button type="button" class="btn btn-primary" onclick="Formulario()">Se Inscreva</button>
-        <!-- <a href="#form" class="btn btn-primary">Se Inscreva</a> -->
+         <button type="button" class="btn btn-primary" onclick="formulario()">Se Inscreva</button>
       </div>
     </header>
 
@@ -102,7 +101,7 @@
               voluptas qui vero quisquam impedit, quaerat recusandae, inventore
               explicabo.
             </p>
-            <a href="#" class="btn btn-primary">Comece agora</a>
+            <button type="button" class="btn btn-primary" onclick="formulario()">Comece agora</button>
           </div>
           <img
             src="./img/hero-img.svg"
@@ -196,7 +195,8 @@
           <h2 class="mt-5">
             E <span class="text-primary">vários</span> outros!
           </h2>
-          <a href="#" class="btn btn-primary mt-3">Conhecer os cursos</a>
+          <!-- Botão -->
+          <a href="#cursos" class="btn btn-primary mt-3">Conhecer os cursos</a>
         </div>
       </section>
     </main>
@@ -233,9 +233,9 @@
           <div class="col-lg-4">
             <h5 class="mb-3">Receba Novidades</h5>
             <form>
-              <label for="email" class="form-label visually-hidden"
-                >Email</label
-              >
+              <label for="email" class="form-label visually-hidden">
+                Email
+              </label>
               <div class="input-group">
                 <input
                   type="email"
@@ -244,9 +244,7 @@
                   placeholder="Digite seu email"
                   aria-label="Digite seu email"
                 />
-                <button class="btn btn-primary" type="submit">
-                  Inscrever-se
-                </button>
+                <button type="button" class="btn btn-primary" onclick="formulario()">Inscrever-se</button>
               </div>
             </form>
           </div>
