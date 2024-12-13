@@ -41,3 +41,38 @@ function enviarEmail() {
 
     window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
+
+// function eventos
+// esse foi punk para centralizar demorei para encontrar um e entender
+function eventos(){
+    const popupCenter = ({
+        url, title, w, h
+      }) => {
+        const dualScreenLeft = window.screenLeft !== undefined ? window.screenLeft : window.screenX;
+        const dualScreenTop = window.screenTop !== undefined ? window.screenTop : window.screenY;
+        const width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
+        const height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
+        const systemZoom = width / window.screen.availWidth;
+        const left = (width - w) / 2 / systemZoom + dualScreenLeft
+        const top = (height - h) / 2 / systemZoom + dualScreenTop
+        const newWindow = window.open(url, title,
+          `
+            scrollbars=yes,
+            width=${w / systemZoom}, 
+            height=${h / systemZoom}, 
+            top=${top}, 
+            left=${left}
+            `
+        )
+        if (window.focus) {
+          newWindow.focus();
+        }
+      }
+      popupCenter({
+        url: 'https://th.bing.com/th/id/OIP.yYBFzWZ0R970KK2bJhwO9AHaEi?rs=1&pid=ImgDetMain',
+        title: 'Evento',
+        w: 500,
+        h: 400
+      });
+    
+}
